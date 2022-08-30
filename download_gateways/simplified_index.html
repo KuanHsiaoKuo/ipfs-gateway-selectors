@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
+    <title>IPFS Gateway Selector</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/config.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jsrender.min.js"></script>
+    <script src="js/jquery-dateformat.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/translations.js" charset="utf-8"></script>
+</head>
+<body class="bg-light">
+<header></header>
+
+<main>
+    <div class="container">
+        <div id="row2" class="row"></div>
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+      <span class="text-muted">
+        <p>
+          Designed and built by <a href="https://github.com/iosetting">IOsetting</a>. 
+          Currently <a href="https://github.com/iosetting/ipfs-gateway-selector">v1.0.4</a>. Code licensed GPL-3.0.
+        </p>
+      </span>
+    </div>
+</footer>
+</body>
+
+<script id="tpl_header" type="text/x-jsrender">
+  <div class="container">
+    <div class="pt-4">
+      <h2>{{:#data["IPFS Gateway Selector"]}}</h2>
+    </div>
+  </div>
+
+
+
+</script>
+
+
+<script id="tpl_row2" type="text/x-jsrender">
+  <div class="col-lg-6 order-lg-2 mb-4">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+      <span>{{:Gateways}}</span>
+      <span>
+        <a id="btn_lag_test" class="btn btn-secondary btn-sm" type="submit">{{:#data['Lag Test']}}</a>
+      </span>
+    </h4>
+    <ul class="list-group mb-3" id="gw_list">
+      <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <div>No Gateways</div>
+        <span class="text-muted"></span>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+</script>
+
+<script src="js/main.js"></script>
+
+
+</html>
